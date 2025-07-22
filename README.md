@@ -1,54 +1,38 @@
-# Web App Gaia – SvelteKit PWA for GitHub Pages
+# sv
 
-A SvelteKit Progressive Web App, installable and offline-ready, styled with Tailwind CSS, and optimized for GitHub Pages.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Features
+## Creating a project
 
-- SvelteKit + Static Adapter
-- Service Worker for offline support
-- Web Manifest for installability
-- Tailwind CSS styling
-- Basic routing (Home, About)
-- GitHub Actions deployment
+If you're seeing this, you've probably already done this step. Congrats!
 
-## Setup
+```bash
+# create a new project in the current directory
+npx sv create
 
-1. **Install dependencies:**
-   ```sh
-   npm install
-   ```
-
-2. **Add your icons to `static/` and an empty `.nojekyll` file.**
-
-## Development
-
-```sh
-npm run dev
+# create a new project in my-app
+npx sv create my-app
 ```
 
-## Build
+## Developing
 
-```sh
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
 npm run build
 ```
 
-## Deploy to GitHub Pages
+You can preview the production build with `npm run preview`.
 
-1. Push your code to GitHub.
-2. GitHub Actions will auto-deploy on push to `main`.
-3. Or, deploy manually:
-   ```sh
-   npm run build
-   npm run deploy
-   ```
-
-## Notes
-
-- If your repo name is not `web-app-gaia`, update the `base` path in `svelte.config.js` and `start_url` in `manifest.webmanifest`.
-- The app is installable and works offline after the first load.
-
-## References
-
-- [Deploy a SvelteKit App to GitHub Pages (Captain Codeman)](https://www.captaincodeman.com/deploy-a-sveltekit-app-to-github-pages)
-- [Publishing a SvelteKit App to GitHub Pages (DEV)](https://dev.to/scc33/publishing-a-sveltekit-app-to-github-pages-4439)
-- [Set up a SvelteKit website in GitHub Pages (Pacifis)](https://www.pacifis.org/posts/set-up-a-sveltekit-website-in-github-pages/)
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

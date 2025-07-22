@@ -1,14 +1,12 @@
-import adapter from '@sveltejs/adapter-static';
-import { vitePreprocess } from '@sveltejs/kit';
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
-const dev = process.argv.includes('dev');
-const base = dev ? '' : '/web-app-gaia'; // Change to your repo name if different
-
-export default {
-  kit: {
-    adapter: adapter(),
-    paths: { base },
-    serviceWorker: { register: true }
-  },
-  preprocess: vitePreprocess()
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://svelte.dev/docs/kit/integrations
+	// for more information about preprocessors
+	preprocess: vitePreprocess(),
+	kit: { adapter: adapter() }
 };
+
+export default config;
