@@ -10,7 +10,7 @@
 		class="fixed bottom-4 left-4 right-4 h-16 rounded-lg bg-white text-black shadow-lg border border-gray-300 flex flex-col md:static md:h-auto md:w-20 md:m-4"
 	>
 		<nav class="flex-1">
-			<ul class="flex h-full w-full flex-row items-center justify-around gap-x-2 md:flex-col md:justify-start md:gap-y-2">
+			<ul class="flex h-full w-full flex-row items-center justify-between gap-x-2 px-2 md:flex-col md:justify-start md:gap-y-2 md:px-0">
 
 				<li
 					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] transition-all duration-300 md:mx-2 md:mt-2 { $page.url.pathname === '/' ? 'bg-[#f4f4f4]' : '' }"
