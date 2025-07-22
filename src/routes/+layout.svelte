@@ -5,15 +5,15 @@
 	let { children } = $props();
 </script>
 
-<div class="flex flex-col md:flex-row h-screen">
+<div class="flex h-screen">
 	<aside
-		class="bg-white text-black transition-all duration-300 flex-shrink-0 md:m-4 rounded-none md:rounded-lg shadow-lg border-t md:border border-gray-300 flex flex-col order-last md:order-first md:w-20"
+		class="fixed bottom-4 left-4 right-4 h-16 rounded-lg bg-white text-black shadow-lg border border-gray-300 flex flex-col md:static md:h-auto md:w-20 md:m-4"
 	>
 		<nav class="flex-1">
-			<ul class="flex flex-row md:flex-col justify-around md:justify-start w-full h-full gap-y-2">
+			<ul class="flex h-full w-full flex-row items-center justify-around gap-x-2 md:flex-col md:justify-start md:gap-y-2">
 
 				<li
-					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] md:mx-2 md:mt-2 transition-all duration-300 { $page.url.pathname === '/' ? 'bg-[#f4f4f4]' : '' }"
+					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] transition-all duration-300 md:mx-2 md:mt-2 { $page.url.pathname === '/' ? 'bg-[#f4f4f4]' : '' }"
 				>
 					<a
 						href="/"
@@ -27,7 +27,7 @@
 					</a>
 				</li>
 				<li
-					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] md:mx-2 transition-all duration-300 { $page.url.pathname === '/equipment' ? 'bg-[#f4f4f4]' : '' }"
+					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] transition-all duration-300 md:mx-2 { $page.url.pathname === '/equipment' ? 'bg-[#f4f4f4]' : '' }"
 				>
 					<a
 						href="/equipment"
@@ -41,7 +41,7 @@
 					</a>
 				</li>
 				<li
-					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] md:mx-2 transition-all duration-300 { $page.url.pathname === '/settings' ? 'bg-[#f4f4f4]' : '' } md:mt-auto md:mb-2"
+					class="flex w-16 justify-center rounded-md hover:bg-[#f4f4f4] transition-all duration-300 md:mx-2 md:mt-auto md:mb-2 { $page.url.pathname === '/settings' ? 'bg-[#f4f4f4]' : '' }"
 				>
 					<a
 						href="/settings"
@@ -57,7 +57,7 @@
 			</ul>
 		</nav>
 	</aside>
-	<main class="flex-1 overflow-y-auto p-4 order-first md:order-last">
+	<main class="flex-1 overflow-y-auto p-4 pb-24 md:pb-4">
 		{@render children()}
 	</main>
 </div>
