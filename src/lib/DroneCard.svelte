@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Battery, Activity, Navigation, Wind } from 'lucide-svelte';
-  import { t } from '$lib/translations/index';
+  import { equipmentsBattery, equipmentsStatus, equipmentsAltitude, equipmentsSpeed } from '$lib/translations/index';
   export let name: string;
   export let battery: number;
   export let status: string;
@@ -14,7 +14,7 @@
     <div class="flex items-center">
       <Battery class="mr-2 text-blue-500" size={20} />
       <div class="w-full">
-        <p class="text-sm text-gray-600">{$t('equipments.battery')}: {battery}%</p>
+        <p class="text-sm text-gray-600">{$equipmentsBattery}: {battery}%</p>
         <div class="bg-gray-200 rounded-full h-2.5">
           <div class="bg-blue-600 h-2.5 rounded-full" style="width: {battery}%"></div>
         </div>
@@ -22,15 +22,15 @@
     </div>
     <div class="flex items-center">
       <Activity class="mr-2 {status === 'Actif' || status === 'En vol' ? 'text-green-500' : 'text-red-500'}" size={20} />
-      <p class="text-sm text-gray-600">{$t('equipments.status')}: <span class="{status === 'Actif' || status === 'En vol' ? 'text-green-600' : 'text-red-600'}">{status}</span></p>
+      <p class="text-sm text-gray-600">{$equipmentsStatus}: <span class="{status === 'Actif' || status === 'En vol' ? 'text-green-600' : 'text-red-600'}">{status}</span></p>
     </div>
     <div class="flex items-center">
       <Navigation class="mr-2 text-purple-500" size={20} />
-      <p class="text-sm text-gray-600">{$t('equipments.altitude')}: {altitude} m</p>
+      <p class="text-sm text-gray-600">{$equipmentsAltitude}: {altitude} m</p>
     </div>
     <div class="flex items-center">
       <Wind class="mr-2 text-indigo-500" size={20} />
-      <p class="text-sm text-gray-600">{$t('equipments.speed')}: {speed} km/h</p>
+      <p class="text-sm text-gray-600">{$equipmentsSpeed}: {speed} km/h</p>
     </div>
   </div>
 </div> 

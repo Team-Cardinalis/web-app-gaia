@@ -75,12 +75,27 @@ export const currentTranslations = derived(currentLocale, ($locale) => {
   return translationData[$locale];
 });
 
-// Translation function that returns a store
-export function t(key: string) {
-  return derived(currentTranslations, ($translations) => {
-    return getNestedValue($translations, key);
-  });
-}
+// Individual translation stores
+export const commonHome = derived(currentTranslations, ($t) => getNestedValue($t, 'common.home'));
+export const commonEquipments = derived(currentTranslations, ($t) => getNestedValue($t, 'common.equipments'));
+export const commonSettings = derived(currentTranslations, ($t) => getNestedValue($t, 'common.settings'));
+
+export const dashboardTitle = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.title'));
+export const dashboardTotalUsers = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.totalUsers'));
+export const dashboardFireDetected = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.fireDetected'));
+export const dashboardHumansDetected = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.humansDetected'));
+export const dashboardGreetingDay = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.greeting_day'));
+export const dashboardGreetingNight = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.greeting_night'));
+
+export const equipmentsTitle = derived(currentTranslations, ($t) => getNestedValue($t, 'equipments.title'));
+export const equipmentsBattery = derived(currentTranslations, ($t) => getNestedValue($t, 'equipments.battery'));
+export const equipmentsStatus = derived(currentTranslations, ($t) => getNestedValue($t, 'equipments.status'));
+export const equipmentsAltitude = derived(currentTranslations, ($t) => getNestedValue($t, 'equipments.altitude'));
+export const equipmentsSpeed = derived(currentTranslations, ($t) => getNestedValue($t, 'equipments.speed'));
+
+export const settingsTitle = derived(currentTranslations, ($t) => getNestedValue($t, 'settings.title'));
+export const settingsLanguage = derived(currentTranslations, ($t) => getNestedValue($t, 'settings.language'));
+export const settingsTheme = derived(currentTranslations, ($t) => getNestedValue($t, 'settings.theme'));
 
 // Set locale function
 export async function setLocale(locale: Locale) {
