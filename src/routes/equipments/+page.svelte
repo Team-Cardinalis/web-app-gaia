@@ -11,7 +11,7 @@
 </script>
 
 <div class="container mx-auto">
-	<h1 class="text-3xl font-bold mb-6 mt-6">{translate('equipments.title')}</h1>
+	<h1 class="text-3xl font-semibold mb-6 mt-6">{translate('equipments.title')}</h1>
 	<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 		{#each drones as drone}
 			<DroneCard {...drone} />

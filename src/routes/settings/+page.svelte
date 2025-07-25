@@ -26,7 +26,7 @@
   }
 </script>
 
-<h1 class="text-3xl font-bold mb-6 mt-6">{$t('settings.title')}</h1>
+<h1 class="text-3xl font-semibold mb-6 mt-6">{$t('settings.title')}</h1>
 <p>{$t('settings.underConstruction')}</p>
 
 <div class="mt-4">
