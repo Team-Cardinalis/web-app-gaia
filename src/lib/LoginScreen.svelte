@@ -21,7 +21,7 @@
 <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
   <div class="max-w-md w-full space-y-8">
     <div class="text-center">
-      <div class="mx-auto h-24 w-24 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mb-6">
+      <div class="mx-auto h-24 w-24 flex items-center justify-center mb-6">
         <img src="/icon-black.svg" alt="GAIA" class="h-12 w-12" />
       </div>
       <h2 class="text-3xl font-bold text-gray-900 mb-2">
