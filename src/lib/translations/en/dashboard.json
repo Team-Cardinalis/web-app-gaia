@@ -1,9 +1,6 @@
 {
   "title": "Dashboard",
   "totalUsers": "Total Users",
-  "sales": "Sales",
-  "newOrders": "New Orders",
-  "activeProjects": "Active Projects",
   "fireDetected": "Fire Detected",
   "humansDetected": "Humans Detected",
   "greeting_day": "Hello",
