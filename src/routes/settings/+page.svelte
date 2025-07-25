@@ -12,15 +12,10 @@
     }
   });
 
-  async function changeLanguage(lang: string) {
+  function changeLanguage(lang: string) {
     selectedLanguage = lang;
     if (browser) {
       localStorage.setItem('language', lang);
-      await fetch('/api/set-language', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ lang })
-      });
       window.location.reload();
     }
   }

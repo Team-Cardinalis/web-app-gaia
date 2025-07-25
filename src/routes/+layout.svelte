@@ -2,26 +2,19 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import NavItem from '$lib/NavItem.svelte';
-	import { t } from '$lib/translations';
+	import { t, loadTranslations, locale } from '$lib/translations';
 	import { get } from 'svelte/store';
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import { locale } from '$lib/translations';
 	const translate = get(t);
 
 	let { children } = $props();
 
 	onMount(async () => {
 		if (browser) {
-			const storedLang = localStorage.getItem('language');
-			if (storedLang && storedLang !== $locale) {
-				await fetch('/api/set-language', {
-					method: 'POST',
-					headers: { 'Content-Type': 'application/json' },
-					body: JSON.stringify({ lang: storedLang })
-				});
-				window.location.reload();
-			}
+			const storedLang = localStorage.getItem('language') || 'en';
+			await loadTranslations(storedLang, $page.url.pathname);
+			locale.set(storedLang);
 		}
 	});
 </script>
