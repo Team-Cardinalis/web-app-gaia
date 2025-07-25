@@ -1,5 +1,15 @@
 {
   "home": "Accueil",
   "equipments": "Équipements",
-  "settings": "Paramètres"
+  "settings": "Paramètres",
+  "welcome": "Bienvenue sur GAIA",
+  "loginSubtitle": "Connectez-vous pour accéder à votre espace personnel",
+  "signInWithGoogle": "Se connecter avec Google",
+  "signingIn": "Connexion en cours...",
+  "loading": "Chargement...",
+  "signOut": "Se déconnecter",
+  "connectedWithGoogle": "Connecté avec Google",
+  "user": "Utilisateur",
+  "termsAcceptance": "En vous connectant, you acceptez nos conditions d'utilisation",
+  "copyright": "© 2024 GAIA. Tous droits réservés."
 } 

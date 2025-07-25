@@ -13,7 +13,7 @@
     {#if icon}
       <svelte:component this={icon} size={24} />
     {:else if iconSrc}
-      <img src={iconSrc} alt="icon" class="w-12 h-12" />
+      <img src={iconSrc} alt="icon" class="w-24 h-24" />
     {/if}
   </div>
   <div>

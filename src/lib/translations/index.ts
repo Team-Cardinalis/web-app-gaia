@@ -13,7 +13,17 @@ const translationData = {
     common: {
       home: 'Home',
       equipments: 'Equipments',
-      settings: 'Settings'
+      settings: 'Settings',
+      welcome: 'Welcome to GAIA',
+      loginSubtitle: 'Sign in to access your personal space',
+      signInWithGoogle: 'Sign in with Google',
+      signingIn: 'Signing in...',
+      loading: 'Loading...',
+      signOut: 'Sign out',
+      connectedWithGoogle: 'Connected with Google',
+      user: 'User',
+      termsAcceptance: 'By signing in, you accept our terms of service',
+      copyright: '© 2024 GAIA. All rights reserved.'
     },
     dashboard: {
       title: 'Dashboard',
@@ -40,7 +50,17 @@ const translationData = {
     common: {
       home: 'Accueil',
       equipments: 'Équipements',
-      settings: 'Paramètres'
+      settings: 'Paramètres',
+      welcome: 'Bienvenue sur GAIA',
+      loginSubtitle: 'Connectez-vous pour accéder à votre espace personnel',
+      signInWithGoogle: 'Se connecter avec Google',
+      signingIn: 'Connexion en cours...',
+      loading: 'Chargement...',
+      signOut: 'Se déconnecter',
+      connectedWithGoogle: 'Connecté avec Google',
+      user: 'Utilisateur',
+      termsAcceptance: 'En vous connectant, vous acceptez nos conditions d\'utilisation',
+      copyright: '© 2024 GAIA. Tous droits réservés.'
     },
     dashboard: {
       title: 'Tableau de bord',
@@ -79,6 +99,16 @@ export const currentTranslations = derived(currentLocale, ($locale) => {
 export const commonHome = derived(currentTranslations, ($t) => getNestedValue($t, 'common.home'));
 export const commonEquipments = derived(currentTranslations, ($t) => getNestedValue($t, 'common.equipments'));
 export const commonSettings = derived(currentTranslations, ($t) => getNestedValue($t, 'common.settings'));
+export const commonWelcome = derived(currentTranslations, ($t) => getNestedValue($t, 'common.welcome'));
+export const commonLoginSubtitle = derived(currentTranslations, ($t) => getNestedValue($t, 'common.loginSubtitle'));
+export const commonSignInWithGoogle = derived(currentTranslations, ($t) => getNestedValue($t, 'common.signInWithGoogle'));
+export const commonSigningIn = derived(currentTranslations, ($t) => getNestedValue($t, 'common.signingIn'));
+export const commonLoading = derived(currentTranslations, ($t) => getNestedValue($t, 'common.loading'));
+export const commonSignOut = derived(currentTranslations, ($t) => getNestedValue($t, 'common.signOut'));
+export const commonConnectedWithGoogle = derived(currentTranslations, ($t) => getNestedValue($t, 'common.connectedWithGoogle'));
+export const commonUser = derived(currentTranslations, ($t) => getNestedValue($t, 'common.user'));
+export const commonTermsAcceptance = derived(currentTranslations, ($t) => getNestedValue($t, 'common.termsAcceptance'));
+export const commonCopyright = derived(currentTranslations, ($t) => getNestedValue($t, 'common.copyright'));
 
 export const dashboardTitle = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.title'));
 export const dashboardTotalUsers = derived(currentTranslations, ($t) => getNestedValue($t, 'dashboard.totalUsers'));
