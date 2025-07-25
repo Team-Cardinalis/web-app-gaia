@@ -4,9 +4,10 @@
   export let color: string;
   export let title: string;
   export let value: string;
+  export let cardClass: string = '';
 </script>
 
-<div class="bg-[#f4f4f4] p-6 rounded-lg border border-gray-200 flex items-center">
+<div class="bg-[#f4f4f4] p-6 rounded-lg border border-gray-200 flex items-center h-full {cardClass}">
   <div class="text-white p-3 rounded-full mr-4" class:bg-{color}-500={true}>
     <svelte:component this={icon} size={24} />
   </div>
