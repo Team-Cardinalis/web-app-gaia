@@ -42,7 +42,6 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
-		"lucide-svelte": "^0.525.0",
-		"sveltekit-i18n": "^2.4.2"
+		"lucide-svelte": "^0.525.0"
 	}
 }
