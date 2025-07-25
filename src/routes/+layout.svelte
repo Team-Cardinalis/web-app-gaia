@@ -45,7 +45,22 @@
 				<ul class="flex h-full w-full flex-row items-center gap-x-2 px-2 md:flex-col md:justify-start md:gap-y-2 md:gap-x-0 md:px-0">
 					<NavItem href="/" imgSrc="/icon-black.svg" alt={$commonHome} active={$page.url.pathname === '/' } />
 					<NavItem href="/equipments" imgSrc="/equipment.svg" alt={$commonEquipments} active={$page.url.pathname === '/equipments' } />
-					<NavItem href="/settings" imgSrc="/profile.svg" alt={$commonSettings} active={$page.url.pathname === '/settings' } />
+					<li
+						class="flex flex-1 justify-center rounded-md hover:bg-[#f4f4f4] transition-all duration-300 md:w-16 md:flex-none md:mx-2 {$page.url.pathname === '/settings' ? 'bg-[#f4f4f4]' : ''} md:mt-auto md:mb-2"
+					>
+						<a
+							href="/settings"
+							class="flex items-center h-14 w-14 justify-center"
+						>
+							{#if $user.photoURL}
+								<img src={$user.photoURL} alt={$commonSettings} class="w-6 h-6 flex-shrink-0 rounded-full" />
+							{:else}
+								<div class="w-6 h-6 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-medium">
+									{$user.displayName?.charAt(0) || $user.email?.charAt(0) || 'U'}
+								</div>
+							{/if}
+						</a>
+					</li>
 				</ul>
 			</nav>
 			

@@ -54,8 +54,8 @@
     </div>
   </div>
   
-  <!-- Mobile logout button (hidden on desktop) -->
-  <div class="mt-4 md:hidden">
+  <!-- Logout button -->
+  <div class="mt-4">
     <button
       on:click={handleSignOut}
       class="w-full flex items-center justify-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors duration-200"

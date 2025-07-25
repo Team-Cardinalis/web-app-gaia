@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp, getApps } from 'firebase/app';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
 
 // Your Firebase configuration
@@ -11,8 +11,8 @@ const firebaseConfig = {
   appId: "1:479023709315:web:gaia-app"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// Initialize Firebase only if no apps exist
+const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
