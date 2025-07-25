@@ -3,5 +3,9 @@
   "totalUsers": "Utilisateurs totaux",
   "sales": "Ventes",
   "newOrders": "Nouvelles commandes",
-  "activeProjects": "Projets actifs"
+  "activeProjects": "Projets actifs",
+  "fireDetected": "Feu détecté",
+  "humansDetected": "Humains détectés",
+  "greeting_day": "Bonjour",
+  "greeting_night": "Bonne Nuit"
 } 

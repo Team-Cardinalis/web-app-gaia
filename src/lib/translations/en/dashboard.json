@@ -3,5 +3,9 @@
   "totalUsers": "Total Users",
   "sales": "Sales",
   "newOrders": "New Orders",
-  "activeProjects": "Active Projects"
+  "activeProjects": "Active Projects",
+  "fireDetected": "Fire Detected",
+  "humansDetected": "Humans Detected",
+  "greeting_day": "Hello",
+  "greeting_night": "Good Night"
 } 
