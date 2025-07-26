@@ -11,7 +11,7 @@
   $: isSunMoonIcon = iconSrc && (iconSrc.includes('sun.svg') || iconSrc.includes('moon.svg'));
 </script>
 
-<div class="bg-[#f4f4f4] p-6 rounded-lg border border-gray-200 flex items-center h-full {cardClass}">
+<div class="bg-white p-6 rounded-lg border border-gray-200 flex items-center h-full {cardClass}">
   <div class="text-white p-3 rounded-full mr-4" style="background-color: {isSunMoonIcon ? 'transparent' : (color === 'yellow' ? '#eab308' : color === 'blue' ? '#3b82f6' : color === 'red' ? '#ef4444' : color === 'orange' ? '#f97316' : '#6b7280')}">
     {#if icon}
       <svelte:component this={icon} size={24} />
